@@ -1,5 +1,7 @@
 from django.db import models
 
+# I have created model class for creating database table 
+
 class ToDoList(models.Model):
 
     title = models.CharField(max_length=255, default=None, null=False)

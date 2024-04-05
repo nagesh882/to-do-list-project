@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List Project</title>
+
+        <!-- I put here external bootstrap css file -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    </head>
+    <body class='bg-dark text-white'>
+        
+        <div class='container-fluid'>
+            <div class='container'>
+                <div class='row mt-3'>
+                    <h1 class='alert alert-info h4 text-center'>My To Do List Project</h1>
+                    <div class='col-sm-4 mt-3'>
+                        <h1 class='alert alert-primary h5'>Add To Do List</h1>
+                        <form action="" method="POST">
+                            {{form.as_p}}
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- I put here external bootstrap js file -->
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+    </body>
+</html>
