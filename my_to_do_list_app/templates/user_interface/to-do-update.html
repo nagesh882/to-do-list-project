@@ -5,17 +5,26 @@
     <div class='container-fluid'>
         <div class='container'>
             <div class='row mt-4'>
-                <div class='col-sm-8 offset-2 offset mt-3'>
-                    <h1 class='alert alert-primary h5'>Update To Do</h1>
-                    <form action="" method="POST" novalidate>
-                        {% csrf_token %}
+                {% if exception_error %}
 
-                        {{form.as_p}}
+                    <h1 class='text-warning text-center h3 mt-5 '>{{exception_error}}</h1>
 
-                        <button type='submit' class='btn btn-success'>Update To Do</button>
-                    </form>
+                {% else %}
 
-                </div>
+                    <div class='col-sm-8 offset-2 offset mt-3'>
+                        <h1 class='alert alert-primary h5'>Update To Do</h1>
+                            <form action="{% url 'to_do_update' to_do_update.slug %}" method="POST" novalidate>
+                                {% csrf_token %}
+                            
+                                {{form.as_p}}
+
+                                <button type='submit' class='btn btn-success'>Update To Do</button>
+                                <a href="{% url 'to_do_list' %}" class='btn btn-primary'>Back to Home</a>
+                            </form>
+                            
+                    </div>
+                        
+                {% endif %}
 
             </div>
 

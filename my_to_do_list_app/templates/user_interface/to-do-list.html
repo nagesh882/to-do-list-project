@@ -6,7 +6,11 @@
         <div class='container'>
             <div class='row mt-4'>
                 <div class='col-sm-12 mt-3'>
-                    <h1 class='alert alert-warning h5'>To Do List</h1>
+                    <h1 class='alert alert-warning h5 d-flex justify-content-between align-items-center'>
+                        To Do List
+                        <a href="{% url 'to_do_create' %}" class='btn btn-primary'>Add To Do</a>
+                    </h1>
+                                        
                     <div class='table-responsive'>
 
                         <table class='table table-secondary table-hover '>
