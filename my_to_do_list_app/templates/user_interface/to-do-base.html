@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List Project</title>
+        <!-- I put here external bootstrap.css file -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    </head>
+    <body class='bg-dark text-light'>
+
+
+        {% block content %}
+        
+
+
+        {% endblock content %}
+
+
+        <!-- I put here external bootstrap.js file -->
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+    </body>
+</html>
